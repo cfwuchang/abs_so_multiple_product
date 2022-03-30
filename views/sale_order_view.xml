@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- add button in SaleOrder -->
+    <record id="mrp_bom_form_view_inheritd" model="ir.ui.view">
+        <field name="name">mrp.bom.form</field>
+        <field name="model">mrp.bom</field>
+        <field name="inherit_id" ref ="mrp.mrp_bom_form_view"/>	
+        <field name="arch" type="xml">
+            <xpath expr ="//notebook" position="before">
+                <button string="多选" name="%(open_view_multiple_product_sale_action)d" type="action" class="oe_highlight" /> 
+            </xpath>
+        </field>   
+    </record>
+
+</odoo>
